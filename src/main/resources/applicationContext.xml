@@ -1,13 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <beans>
-
     <bean name="A" class="com.wbz.bean.A">
-        <property name="name" value="aname"/>
+        <property name="name" value="Rekkles"/>
     </bean>
+
     <bean name="B" class="com.wbz.bean.B">
-        <property name="name" ref="A"/>
+        <property name="a" ref="A"/>
     </bean>
 
-
-
-
+    <bean name="C" class="com.wbz.bean.C">
+        <property name="b" ref="B"/>
+    </bean>
 </beans>

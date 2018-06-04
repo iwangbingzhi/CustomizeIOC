@@ -32,7 +32,6 @@ public class BeanUtils {
                     }
                 }
             }
-
         } catch (IntrospectionException e) {
             e.printStackTrace();
         }
