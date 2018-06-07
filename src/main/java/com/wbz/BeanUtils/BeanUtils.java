@@ -26,7 +26,7 @@ public class BeanUtils {
                     String pdName = pd.getName();
                     // 使用要找的属性名称与当前描述器描述的属性名称比对
                     if(pdName.equals(name)){
-                        //比如一致则找到了
+                        //比对一致则找到了
                        method = pd.getWriteMethod();
 
                     }

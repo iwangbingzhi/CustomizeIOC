@@ -58,7 +58,7 @@ public class ClassPathXmlApplicationContext implements BeanFactory {
         Class clazz = null;
 
         try {
-            clazz = java.lang.Class.forName(className);
+            clazz = Class.forName(className);
         }catch (ClassNotFoundException e){
             e.printStackTrace();
             throw new RuntimeException("请检查"+className+"bean的class配置是否正确");
