@@ -9,15 +9,6 @@ public class Property {
         return name;
     }
 
-    @Override
-    public String toString() {
-        return "Property{" +
-                "name='" + name + '\'' +
-                ", value='" + value + '\'' +
-                ", ref='" + ref + '\'' +
-                '}';
-    }
-
     public void setName(String name) {
         this.name = name;
     }

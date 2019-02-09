@@ -1,13 +1,15 @@
-package com.wbz.BeanUtils;
+package com.wbz.beanutils;
 
 import java.beans.BeanInfo;
 import java.beans.IntrospectionException;
 import java.beans.Introspector;
 import java.beans.PropertyDescriptor;
 import java.lang.reflect.Method;
-
+//注入bean属性的工具类
 public class BeanUtils {
-    //参数1 bean对象  参数2 要获得的bean对象对应的属性名称
+
+    //参数1 bean对象
+    //参数2 要获得的bean对象对应的属性名称，比如有一个user对象，得到该user对象,user对象中还有一个name属性，还需要将name属性的名字传递过来，根据这个方法获取到setName()
     public static Method getWriteMethod(Object beanObj, String name) {
         Method method = null;
         //内省技术实现该方法

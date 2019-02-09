@@ -42,9 +42,15 @@ public class ConfigManager {
                 Bean bean = new Bean();
                 String name = beanEle.attributeValue("name");
                 String className = beanEle.attributeValue("class");
+                String scope = beanEle.attributeValue("scope");
 
                 bean.setName(name);
                 bean.setClassName(className);
+
+                //解决scope默认为singleton，如果不填写scope属性，会出现scope值为null的情况
+                if (scope!=null){
+                    bean.setScope(scope);
+                }
 
                 //4.2获得bean元素下所有property子元素，将属性name、value、ref封装到property中
                 List<Element> children = beanEle.elements("property");

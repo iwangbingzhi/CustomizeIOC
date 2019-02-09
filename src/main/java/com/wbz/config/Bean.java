@@ -6,6 +6,16 @@ import java.util.List;
 public class Bean {
     private String name;
     private String className;
+    private String scope="singleton";
+
+    public String getScope() {
+        return scope;
+    }
+
+    public void setScope(String scope) {
+        this.scope = scope;
+    }
+
     private List<Property> properties = new ArrayList<Property>();
 
     public String getName() {
@@ -29,6 +39,7 @@ public class Bean {
         return "Bean{" +
                 "name='" + name + '\'' +
                 ", className='" + className + '\'' +
+                ", scope='" + scope + '\'' +
                 ", properties=" + properties +
                 '}';
     }

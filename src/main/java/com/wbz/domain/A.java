@@ -1,7 +1,11 @@
-package com.wbz.bean;
+package com.wbz.domain;
 
 public class A {
     private String name;
+
+    public A() {
+        System.out.println("A被创建了");
+    }
 
     public String getName() {
         return name;

@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans>
-    <bean name="A" class="com.wbz.bean.A">
-        <property name="name" value="Rekkles"/>
+    <bean name="A" class="com.wbz.domain.A">
+        <property name="name" value="123"/>
     </bean>
 
-    <bean name="B" class="com.wbz.bean.B">
+    <bean name="B" class="com.wbz.domain.B" scope="prototype">
         <property name="a" ref="A"/>
+        <property name="name" value="bname哦"/>
     </bean>
 
-    <bean name="C" class="com.wbz.bean.C">
+    <bean name="C" class="com.wbz.domain.C" scope="prototype">
         <property name="b" ref="B"/>
     </bean>
 </beans>
